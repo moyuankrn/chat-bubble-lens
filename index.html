@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chat Bubble Lens — Preview</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="on-wall">
+  <div class="wall" aria-hidden="true"><img class="on" src="wallpaper.svg" alt=""></div>
+  <main class="demo">
+    <header class="topbar">
+      <div><span class="eyebrow">INTERACTIVE PREVIEW</span><h1>Chat Bubble Lens</h1></div>
+      <button id="change-wall" type="button">Change scene</button>
+    </header>
+    <section class="chat" aria-label="Demo conversation">
+      <div class="chat-scroll" id="chat-scroll">
+        <div class="intro">A wallpaper lens drawn only around the edge of each text bubble.</div>
+        <div class="msg assistant">The middle stays clear, so the scene behind the conversation can keep moving.</div>
+        <div class="msg user">And the rim borrows a little light from the wallpaper.</div>
+        <div class="msg assistant">Try adding a message or changing the scene.</div>
+      </div>
+      <form id="composer" class="composer">
+        <input id="message" type="text" maxlength="240" autocomplete="off" placeholder="Write a message…" aria-label="Message">
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <footer><span id="status" aria-live="polite">Preparing lens…</span><span>Experimental browser effect · no external assets</span></footer>
+  </main>
+  <script type="module" src="demo.js"></script>
+</body>
+</html>
